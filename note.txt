@@ -1,0 +1,10 @@
+TODO
+	Read instruction
+		Balance the ball in the center of the plate.
+		Tilt the plate by slowly moving the mouse toward an edge.
+		Read on plate.
+	Material
+		Concentric circles
+		Translucent plate
+		Text.
+		

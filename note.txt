@@ -3,8 +3,15 @@ TODO
 		Balance the ball in the center of the plate.
 		Tilt the plate by slowly moving the mouse toward an edge.
 		Read on plate.
+	Score per second by proximity to center.
+	When fall, game over.
+	Reset
 	Material
 		Concentric circles
 		Translucent plate
 		Text.
-		
+	Arrow to cursor points toward tilting direction.
+		Length indicates force.
+	Motion trail on ball.
+
+http://wiki.unity3d.com/index.php?title=3DText

@@ -25,7 +25,9 @@ public class Pivot : MonoBehaviour {
 	void FixedUpdate () {
 		// TorqueAxis ();
 		TorquePosition ();
-		rb.AddTorque (0, 0, Time.deltaTime * -torqueHorizontal * torqueMultiplier);
-		// rb.AddTorque (transform.right * torqueVertical * torqueMultiplier);
+		rb.AddTorque (
+		              Time.deltaTime * torqueVertical * torqueMultiplier,
+		              0,
+		              Time.deltaTime * -torqueHorizontal * torqueMultiplier);
 	}
 }

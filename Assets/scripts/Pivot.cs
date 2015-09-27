@@ -5,9 +5,11 @@ public class Pivot : MonoBehaviour {
 	public float torqueMultiplier;
 	public float torqueVertical;
 	public float torqueHorizontal;
+	public float minimumDimension;
 	public Rigidbody rb;
 
 	void Start () {
+		minimumDimension = Mathf.Min (Screen.width, Screen.height);
 		rb = GetComponent<Rigidbody>();
 		rb.constraints = RigidbodyConstraints.FreezePosition;
 	}
@@ -18,13 +20,16 @@ public class Pivot : MonoBehaviour {
 	}
 
 	void TorquePosition() {
-		torqueHorizontal =  (Input.mousePosition.x - 0.5f * Screen.width) / Screen.width;
-		torqueVertical =  (Input.mousePosition.y - 0.5f * Screen.height) / Screen.height;
+
+		torqueHorizontal =  Mathf.Min (1.0f, (Input.mousePosition.x - 0.5f * Screen.width) / minimumDimension);
+		torqueVertical =  Mathf.Min(1.0f, (Input.mousePosition.y - 0.5f * Screen.height) / minimumDimension);
 	}
 
 	void FixedUpdate () {
-		// TorqueAxis ();
 		TorquePosition ();
+		if (!Model.isGamePlaying) {
+			return;
+		}
 		rb.AddTorque (
 		              Time.deltaTime * torqueVertical * torqueMultiplier,
 		              0,

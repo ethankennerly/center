@@ -1,8 +1,14 @@
-TODO
+FEATURES
 	Read instruction
 		Balance the ball in the center of the plate.
 		Tilt the plate by slowly moving the mouse toward an edge.
 		Read on plate.
+			http://wiki.unity3d.com/index.php?title=3DText
+
+TODO
+	Click center to drop ball.
+		Model
+			http://www.toptal.com/unity-unity3d/unity-with-mvc-how-to-level-up-your-game-development
 	Score per second by proximity to center.
 	When fall, game over.
 	Reset
@@ -13,5 +19,3 @@ TODO
 	Arrow to cursor points toward tilting direction.
 		Length indicates force.
 	Motion trail on ball.
-
-http://wiki.unity3d.com/index.php?title=3DText

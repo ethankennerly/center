@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Pivot : MonoBehaviour {
 	public float torqueMultiplier;
+	public float inverter = 1f;
 	public float torqueVertical;
 	public float torqueHorizontal;
 	public float minimumDimension;
@@ -31,8 +32,8 @@ public class Pivot : MonoBehaviour {
 			return;
 		}
 		rb.AddTorque (
-		              Time.deltaTime * torqueVertical * torqueMultiplier,
+		              Time.deltaTime * inverter * torqueVertical * torqueMultiplier,
 		              0,
-		              Time.deltaTime * -torqueHorizontal * torqueMultiplier);
+		              Time.deltaTime * inverter * -torqueHorizontal * torqueMultiplier);
 	}
 }

@@ -2,11 +2,9 @@ using UnityEngine;
 using System.Collections;
 
 public class StartPlate : MonoBehaviour {
-	public string myName;
 	public GameObject ball;
 
 	void Start () {
-		myName = this.name;
 		gameObject.SetActive (true);
 		ball = GameObject.Find ("Ball");
 	}

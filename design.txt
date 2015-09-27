@@ -1,0 +1,30 @@
+FEATURES
+	Read instruction
+		Balance the ball in the center of the plate.
+		Tilt the plate by slowly moving the mouse toward an edge.
+		Read on plate.
+			http://wiki.unity3d.com/index.php?title=3DText
+	Click center to drop ball.
+		Model
+			http://www.toptal.com/unity-unity3d/unity-with-mvc-how-to-level-up-your-game-development
+	When fall, game over.
+	Reset with ball to click
+		Test case:  2015-09-26 Jennifer Russ may expect to reset.
+	Material
+		Translucent plate
+		Text.
+	Experiment with motion trail on ball.
+	Experiment with arrow to cursor points toward tilting direction.
+		Length indicates force.
+	Narrow spotlight.
+		Test case:  2015-09-26 Jennifer Russ expects to realize how to tilt plate with fine control.
+	Pink plate.  White background.
+
+TODO
+	Draw circle in center around ball.
+		Test case:  2015-09-26 Jennifer Russ expects to see circle in center to aim for.
+	Translucent ball?
+	Tilt targets target position.
+		Test case:  2015-09-26 Jennifer Russ expects to realize how to tilt plate with fine control.
+	Score per second by proximity to center.
+	Concentric circle material

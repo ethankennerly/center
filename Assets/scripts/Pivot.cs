@@ -8,11 +8,14 @@ public class Pivot : MonoBehaviour {
 	public float torqueHorizontal;
 	public float minimumDimension;
 	public Rigidbody rb;
+	public GameObject ballPrefab;
+	public GameObject ball;
 
 	void Start () {
 		minimumDimension = Mathf.Min (Screen.width, Screen.height);
 		rb = GetComponent<Rigidbody>();
 		rb.constraints = RigidbodyConstraints.FreezePosition;
+		ball = GameObject.Find("Ball");
 	}
 
 	void TorqueAxis() {
@@ -28,6 +31,10 @@ public class Pivot : MonoBehaviour {
 
 	void FixedUpdate () {
 		TorquePosition ();
+		if (!ball || !ball.gameObject.activeSelf) {
+			ball = (GameObject) Instantiate(ballPrefab, new Vector3(0, 4.5f, 0), Quaternion.identity);
+			ball.SetActive(true);
+		}
 		if (!Model.isGamePlaying) {
 			return;
 		}

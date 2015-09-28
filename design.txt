@@ -34,7 +34,24 @@ TODO
 	Translucent ball?
 	Concentric circle material
 
+POSTMORTEM
 
+What went well
++ Tune physics while playing.
++ Tune lights and materials while playing.
++ Primitives easy to see and arrange.
+
+What went poorly
+- How can I inspect why the ball is disappearing?
+- Specular light reflection from directional light in WebGL.
+- Chrome does not show all of the material in WebGL.
+- Prevent: Unhandled Exception: System.UnauthorizedAccessException: Access to the path "C:\archive\unity\center\Center\Temp\Assembly-CSharp.dll.mdb" is denied.
+- Slow build and load time.
+- How can I configure more properties in code and less in the editor?
+	- How do I instantiate an object purely from code?  
+	http://waynelee3d.com/blog/2014/04/11/unity-c-spawning-a-gameobject/
+- How can I reset the material or light?  On restart it looks dim.
+- How do I build a small WebGL download?  It is at least 3 MB for a simple game.
 
 The current date is: Sun 09/27/2015 
 			else {

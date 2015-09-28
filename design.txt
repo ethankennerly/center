@@ -19,12 +19,29 @@ FEATURES
 	Narrow spotlight.
 		Test case:  2015-09-26 Jennifer Russ expects to realize how to tilt plate with fine control.
 	Pink plate.  White background.
-
-TODO
 	Draw circle in center around ball.
 		Test case:  2015-09-26 Jennifer Russ expects to see circle in center to aim for.
-	Translucent ball?
+
+TODO
+	Grow ball while near center. 
+	Shrink ball while near edge.
+	When ball bigger radius than plate, win.
+		Explode ball.
+		Morph ball into heart.
 	Tilt targets target position.
 		Test case:  2015-09-26 Jennifer Russ expects to realize how to tilt plate with fine control.
 	Score per second by proximity to center.
+	Translucent ball?
 	Concentric circle material
+
+
+
+The current date is: Sun 09/27/2015 
+			else {
+				float proximity = 2.0f * gameObject.transform.localScale.x - Vector3.Distance(gameObject.transform.position, plate.gameObject.transform.position);
+				proximity = Mathf.Max(0.0f, proximity);
+				proximity *= Time.deltaTime;
+				// rigidBody.mass -= proximity * gameObject.transform.localScale.x;
+				// gameObject.transform.localScale += new Vector3(proximity, proximity, proximity);
+				// rigidBody.drag = Mathf.Max(rigidBody.drag - 0.1f * Time.deltaTime, 1.0f);
+			}

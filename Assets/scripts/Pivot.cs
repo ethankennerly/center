@@ -35,5 +35,8 @@ public class Pivot : MonoBehaviour {
 		              Time.deltaTime * inverter * torqueVertical * torqueMultiplier,
 		              0,
 		              Time.deltaTime * inverter * -torqueHorizontal * torqueMultiplier);
+		if (2.0 < gameObject.transform.localScale.x) {
+			gameObject.transform.localScale -= new Vector3(0.05f * Time.deltaTime, 0.0f, 0.05f * Time.deltaTime);
+		}
 	}
 }
